@@ -1,1 +1,73 @@
 /*  your css code here. If applicable */
+body {
+      font-family: Arial, sans-serif;
+      background: white;
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .container {
+      text-align: center;
+      width: 350px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      font-family: cursive;
+    }
+
+    .form-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .form-row label {
+      width: 70px;
+      text-align: left;
+    }
+
+    .form-row input {
+      flex: 1;
+      padding: 8px;
+      border: 2px solid black;
+    }
+
+    #submit {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid black;
+      background: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .message {
+      margin-bottom: 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: repeat(3, 100px);
+      justify-content: center;
+    }
+
+    .cell {
+      background: pink;
+      border: 2px solid black;
+      font-size: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
