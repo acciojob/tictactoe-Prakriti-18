@@ -1,12 +1,10 @@
-//your JS code here. If required.
-const submitBtn = document.getElementById("submit");
+ const submitBtn = document.getElementById("submit");
   const startScreen = document.getElementById("start-screen");
   const gameScreen = document.getElementById("game-screen");
   const message = document.querySelector(".message");
   const cells = document.querySelectorAll(".cell");
 
-  let player1, player2;
-  let currentPlayer = "X";
+  let currentPlayer = "x";
   let gameOver = false;
 
   const winPatterns = [
@@ -16,17 +14,17 @@ const submitBtn = document.getElementById("submit");
   ];
 
   submitBtn.addEventListener("click", () => {
-    player1 = document.getElementById("player1").value;
-    player2 = document.getElementById("player2").value;
+    const p1 = document.getElementById("player1").value;
+    const p2 = document.getElementById("player2").value;
 
-    if (!player1 || !player2) {
+    if (!p1 || !p2) {
       alert("Enter both player names");
       return;
     }
 
     startScreen.classList.add("hidden");
     gameScreen.classList.remove("hidden");
-    message.innerText = `${player1}, you're up`;
+    message.innerText = "Player1, you're up";
   });
 
   cells.forEach(cell => {
@@ -36,17 +34,18 @@ const submitBtn = document.getElementById("submit");
       cell.innerText = currentPlayer;
 
       if (checkWin()) {
-        const winner = currentPlayer === "X" ? player1 : player2;
-        message.innerText = `${winner}, congratulations you won!`;
+        const winner =
+          currentPlayer === "x" ? "Player1" : "Player2";
+        message.innerText = `${winner} congratulations you won!`;
         gameOver = true;
         return;
       }
 
-      currentPlayer = currentPlayer === "X" ? "O" : "X";
+      currentPlayer = currentPlayer === "x" ? "o" : "x";
       message.innerText =
-        currentPlayer === "X"
-          ? `${player1}, you're up`
-          : `${player2}, you're up`;
+        currentPlayer === "x"
+          ? "Player1, you're up"
+          : "Player2, you're up";
     });
   });
 

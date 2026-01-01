@@ -1,21 +1,19 @@
-/*  your css code here. If applicable */
 body {
       font-family: Arial, sans-serif;
-      background: white;
       display: flex;
       justify-content: center;
       margin-top: 40px;
+      background: white;
     }
 
     .container {
-      text-align: center;
       width: 350px;
+      text-align: center;
     }
 
     h1 {
-      font-size: 28px;
-      margin-bottom: 20px;
       font-family: cursive;
+      margin-bottom: 20px;
     }
 
     .form-row {
@@ -40,9 +38,8 @@ body {
       padding: 12px;
       border: 2px solid black;
       background: white;
-      font-size: 16px;
       cursor: pointer;
-      margin-top: 10px;
+      font-size: 16px;
     }
 
     .hidden {
@@ -50,9 +47,9 @@ body {
     }
 
     .message {
-      margin-bottom: 15px;
       font-size: 18px;
       font-weight: bold;
+      margin-bottom: 15px;
     }
 
     .board {
